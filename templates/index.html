@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTHURA REFINERY</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{% static 'img/prototel-logo.avif' %}" alt="Prontotel- Committed to Excellence ">
+            </div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/fire">Fire Safety</a></li>
+
+            </ul>
+        </nav>
+        <div class="banner">
+        <!-- <img src="{% static 'img/mthura-refinery-banner.png' %}" alt="Prontotel- Committed to Excellence">  -->
+            <div class="banner-items">
+                <img src="{% static 'img/indianoil.png' %}" alt="Indian Oil">
+                <div class="text-box">
+                    <h1>MTHURA REFINERY</h1>
+                    <H1>ENVIRONMENT DATA</H1>
+                </div>
+                <img src="{% static 'img/mthura-refinery.jpg' %}" alt="Mthura Refinery">
+            </div>
+        </div>
+
+    </header>
+    <main>
+
+        <div class="mainContainer">
+            <table class="myTable">
+                <thead>
+                    <tr>
+                        <th> SN</th>
+                        <th>CHEMICAL</th>
+                        <th>QUANTITY</th>
+
+                    </tr>
+                    
+                    
+                </thead>
+                <tbody>
+                    {% for data in data_list %}
+                    <tr>
+                        <td> {{ forloop.counter}} </td>
+                        <td>{{ data.CHEMICAL}} </td>
+                        <td>{{ data.QUANTITY}} </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        Thanks for visiting us!
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

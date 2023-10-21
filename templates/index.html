@@ -12,19 +12,10 @@
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <img src="{% static 'img/prototel-logo.avif' %}" alt="Prontotel- Committed to Excellence ">
-            </div>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/fire">Fire Safety</a></li>
-
-            </ul>
-        </nav>
         <div class="banner">
         <!-- <img src="{% static 'img/mthura-refinery-banner.png' %}" alt="Prontotel- Committed to Excellence">  -->
             <div class="banner-items">
-                <img src="{% static 'img/indianoil.png' %}" alt="Indian Oil">
+                <img src="{% static 'img/indianoil.jpg' %}" alt="Indian Oil">
                 <div class="text-box">
                     <h1>MTHURA REFINERY</h1>
                     <H1>ENVIRONMENT DATA</H1>
@@ -32,7 +23,7 @@
                 <img src="{% static 'img/mthura-refinery.jpg' %}" alt="Mthura Refinery">
             </div>
         </div>
-
+    </nav>
     </header>
     <main>
 
@@ -40,9 +31,9 @@
             <table class="myTable">
                 <thead>
                     <tr>
-                        <th> SN</th>
-                        <th>CHEMICAL</th>
-                        <th>QUANTITY</th>
+                        <th class="blue-f"> SN</th>
+                        <th class="blue-f">CHEMICAL</th>
+                        <th class="blue-f">QUANTITY</th>
 
                     </tr>
                     
@@ -51,18 +42,18 @@
                 <tbody>
                     {% for data in data_list %}
                     <tr>
-                        <td> {{ forloop.counter}} </td>
-                        <td>{{ data.CHEMICAL}} </td>
-                        <td>{{ data.QUANTITY}} </td>
+                        <td class="blue-f"> {{ forloop.counter}} </td>
+                        <td class="yellow-f">{{ data.CHEMICAL}} </td>
+                        <td class="red-f">{{ data.QUANTITY}} </td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
         </div>
     </main>
-    <footer>
+    <!-- <footer>
         Thanks for visiting us!
-    </footer>
+    </footer> -->
 
     <script src="{% static 'js/script.js' %}"></script>
 

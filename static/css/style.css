@@ -10,33 +10,8 @@
 
 }
 
-nav{
-    background-color: blue;
-    height: 4rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-}
-ul{
-
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-
-
-}
-ul li a{
-    color: white;
-    font-size: 18px;
-    margin: 6px;
-    padding: 6px;
-    font-family: var(--sans);
-    text-decoration: none;
-    
-
-
+body{
+    background-color: #171321;;
 }
 .banner{
     width: 100%;
@@ -46,7 +21,7 @@ ul li a{
 
 }
 .banner-items{
-    margin: 1rem 6rem;
+    margin: 0 6rem;
     width:calc(100% - 12rem);
     height: auto;
     display: flex;
@@ -70,7 +45,8 @@ ul li a{
 .text-box h1{
     font-family: sans-serif, monospace;
     font-size: 42px;
-    color: blue;
+    color:red;
+    border: 1px solid white;
 
 }
 .logo{
@@ -84,13 +60,13 @@ ul li a{
 }
 
 .mainContainer{
-    margin: 1rem 10rem;
+    margin: 0 16rem;
     padding: 10px 0;
-    background-color: rgb(237, 231, 231);
-    box-shadow: 0 0 25px white;
+    /* background-color: rgb(237, 231, 231); */
+    /* box-shadow: 0 0 25px white; */
     height: auto;
     border-radius: 6px;
-    width: calc(100% - 20rem);
+    width: calc(100% - 33rem);
 
     
 }
@@ -98,9 +74,24 @@ ul li a{
     width: 100%;
     margin: 12px;
     padding: 12px;
+    color: red;
 
 }
 th,td{
-    border: 2px solid black;
+    border: 2px solid white;
+    text-align: center;
 
+
+}
+
+.blue-f{
+    color:rgb(109, 109, 223);
+}
+
+.red-f{
+    color: red;
+}
+
+.yellow-f{
+    color: yellow;
 }

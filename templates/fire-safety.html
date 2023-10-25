@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATHURA REFINERY</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="banner">
+                <!-- <img src="{% static 'img/mthura-refinery-banner.png' %}" alt="Prontotel- Committed to Excellence">  -->
+                <div class="banner-items">
+                    <img src="{% static 'img/indianoil.jpg' %}" alt="Indian Oil">
+                    <div class="text-box">
+                        <h1>MATHURA REFINERY</h1>
+                        <H1>FIRE SAFETY</H1>
+                    </div>
+                    <img src="{% static 'img/mthura-refinery.jpg' %}" alt="Mathura Refinery">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <div class="mainContainer">
+
+                
+            <h2 class="green-f table-heading">WELCOME TO MATURA REFINERY TEST1</h2>
+            <h2 class="green-f table-heading">WELCOME TO MATURA REFINERY TEST2</h2>
+            <!-- For Fire-Safety Data -->
+            <table id="tb-first" class="myTable">
+                
+                <tbody>
+                    {% for data in data_list_first %}
+                    <tr>
+
+                        <td class="blue-f">{{ data.SNO }}</td>
+                    <td class="yellow-f">{{ data.FIELD }}</td>
+                    <td class="red-f">{{ data.VALUE }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            
+            </table>
+            <h2 class="green-f table-heading">CLEAN REFINERY GREEN REFINERY MATHURA REFINERY</h2>
+            <h2 class="green-f table-heading">Dyhu fjQkbujh xzhu fjQkbujh</h2>
+        </div>
+    </main>
+    <!-- <footer>
+        Thanks for visiting us!
+    </footer> -->
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+
+</html>

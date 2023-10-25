@@ -8,5 +8,6 @@ from django.contrib import admin
 
 urlpatterns = [
     path('', views.excel_data_request, name="home"),
+    path('fire-safety/', views.fire_safety, name="fire-safety"),
 
 ]

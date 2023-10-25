@@ -2,53 +2,96 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTHURA REFINERY</title>
+    <title>MATHURA REFINERY</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+
 </head>
+
 <body>
     <header>
         <nav>
-        <div class="banner">
-        <!-- <img src="{% static 'img/mthura-refinery-banner.png' %}" alt="Prontotel- Committed to Excellence">  -->
-            <div class="banner-items">
-                <img src="{% static 'img/indianoil.jpg' %}" alt="Indian Oil">
-                <div class="text-box">
-                    <h1>MTHURA REFINERY</h1>
-                    <H1>ENVIRONMENT DATA</H1>
+            <div class="banner">
+               
+                <div class="banner-items">
+                    <img src="{% static 'img/indianoil.jpg' %}" alt="Indian Oil">
+                    <div class="text-box">
+                        <h1>MATHURA REFINERY</h1>
+                        <H1>ENVIRONMENT DATA</H1>
+                    </div>
+                    <img src="{% static 'img/mthura-refinery.jpg' %}" alt="Mathura Refinery">
                 </div>
-                <img src="{% static 'img/mthura-refinery.jpg' %}" alt="Mthura Refinery">
             </div>
-        </div>
-    </nav>
+        </nav>
     </header>
     <main>
 
         <div class="mainContainer">
-            <table class="myTable">
-                <thead>
-                    <tr>
-                        <th class="blue-f"> SN</th>
-                        <th class="blue-f">CHEMICAL</th>
-                        <th class="blue-f">QUANTITY</th>
 
-                    </tr>
-                    
-                    
-                </thead>
-                <tbody>
-                    {% for data in data_list %}
+
+            <!-- For First Excel Data -->
+            <table id="tb-first" class="myTable">
+                <!-- <thead>
                     <tr>
-                        <td class="blue-f"> {{ forloop.counter}} </td>
-                        <td class="yellow-f">{{ data.CHEMICAL}} </td>
-                        <td class="red-f">{{ data.QUANTITY}} </td>
+                        <th class="blue-f">Field</th>
+                        <th class="blue-f">Value</th>
+                    </tr>
+                </thead> -->
+                <tbody>
+                    {% for data in data_list_first %}
+                    <tr>
+                        <td class="yellow-f">{{ data.Field }}</td>
+                        <td class="green-f">{{ data.Value }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
+
+            <!-- For Second Excel Data -->
+            <table id="tb-second" class="myTable">
+                <h2 class="blue-f table-heading">LIST OF HAZARDOUS CHEMICALS</h2>
+                <thead>
+                    <tr>
+                        <th class="blue-f">SN</th>
+                        <th class="blue-f">CHEMICAL</th>
+                        <th class="blue-f">QUANTITY</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for data in data_list_second %}
+                    <tr>
+                        <td class="blue-f">{{ data.SN }}</td>
+                        <td class="yellow-f">{{ data.CHEMICAL }}</td>
+                        <td class="red-f">{{ data.QUANTITY }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <!-- For Third Excel Data -->
+            <h2 class="blue-f table-heading">LIST OF HAZARDOUS WASTE</h2>
+            <table id="tb-third" class="myTable">
+                <thead>
+                    <tr>
+                        <th class="blue-f">SN</th>
+                        <th class="blue-f">TYPE OF WASTE</th>
+                        <th class="blue-f">QUANTITY</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for data in data_list_third %}
+                    <tr>
+                        <td class="blue-f">{{ data.SN }}</td>
+                        <td class="yellow-f">{{ data.TYPEOFWASTE }}</td>
+                        <td class="red-f">{{ data.QUANTITY }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <h2 class="green-f table-heading">WELCOME TO MATHURA REFINERY</h2>
         </div>
     </main>
     <!-- <footer>
@@ -58,4 +101,5 @@
     <script src="{% static 'js/script.js' %}"></script>
 
 </body>
+
 </html>
